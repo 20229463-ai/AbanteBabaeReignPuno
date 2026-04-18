@@ -1,0 +1,109 @@
+{
+    "issues": [
+        {
+            "id": "vaw",
+            "title": "Ending Violence (VAW)",
+            "image": "https://r2-bucket.flowith.net/f/cf8698e2d1f358ac/end_violence_women_solidarity_visual_index_1.jpeg",
+            "definition": "Any harmful act perpetrated against a person’s will based on gender differences.",
+            "points": [
+                "RA 9262: Protection for women and their children from abuse.",
+                "Safe Spaces Act: Penalizing catcalling and online harassment.",
+                "Consent is key: Every woman has the right to say 'No'."
+            ],
+            "cta": "Learn how to support survivors"
+        },
+        {
+            "id": "economic",
+            "title": "Economic Empowerment",
+            "image": "https://r2-bucket.flowith.net/f/432b140c037db14b/filipina_economic_empowerment_visual_index_2.jpeg",
+            "definition": "Ensuring women have equal access to wealth, jobs, and financial security.",
+            "points": [
+                "Equal Pay: Right to fair wages for the same work.",
+                "Safe Workplaces: Protection from labor exploitation.",
+                "Financial Literacy: Tools to manage and grow personal savings."
+            ],
+            "cta": "Join a workshop"
+        },
+        {
+            "id": "education",
+            "title": "Education Access",
+            "image": "https://r2-bucket.flowith.net/f/8289268393f9d74a/filipina_student_education_scholarship_index_3.jpeg",
+            "definition": "The right of every girl to finish schooling and reach her full potential.",
+            "points": [
+                "Scholarship Support: Helping girls overcome financial barriers.",
+                "STEM Advocacy: Encouraging girls in science and technology.",
+                "Mentorship: Connecting students with career role models."
+            ],
+            "cta": "Explore scholarships"
+        },
+        {
+            "id": "health",
+            "title": "Health & Rights",
+            "image": "https://r2-bucket.flowith.net/f/fe673bcb76b374ca/filipina_health_reproductive_rights_visual_index_4.jpeg",
+            "definition": "Access to quality healthcare and the right to make choices about one's body.",
+            "points": [
+                "Reproductive Care: Safe maternal and family planning services.",
+                "Mental Health: Support systems for emotional well-being.",
+                "Nutrition: Ensuring healthy diets for women in all stages."
+            ],
+            "cta": "Find mental health support"
+        }
+    ],
+    "stories": [
+        {
+            "name": "Lina",
+            "story": "For years, I thought the shouting was normal. Then I learned about RA 9262. Through the help of my local VAW Desk, I realized I didn’t have to live in fear. Nahanap ko ang aking lakas.",
+            "status": "Entrepreneur"
+        },
+        {
+            "name": "Maria",
+            "story": "When I was catcalled on my way to campus, I used to just look down. But after learning about the Safe Spaces Act, I reported it. It made the street safer for everyone.",
+            "status": "Student"
+        },
+        {
+            "name": "Anonymous",
+            "story": "Leaving a toxic relationship was the hardest thing I've done, but the support group here gave me the courage. Now, I advocate for others.",
+            "status": "Community Member"
+        }
+    ],
+    "hotlines": [
+        {"name": "National Emergency", "num": "911", "icon": "phone"},
+        {"name": "Aleng Pulis (PNP)", "num": "0919-777-7377", "icon": "shield-check"},
+        {"name": "PCW (IACVAWC)", "num": "0917-867-1907", "icon": "message-square"},
+        {"name": "Mental Health (NCMH)", "num": "1553", "icon": "heart"}
+    ],
+    "guides": [
+        {
+            "title": "Public Harassment",
+            "steps": ["Move to a well-lit area immediately", "Call out the behavior if safe to do so", "Report to the nearest BPSO or police"]
+        },
+        {
+            "title": "Domestic Safety",
+            "steps": ["Secure a Barangay Protection Order (BPO)", "Keep an emergency bag ready", "Establish a code word with friends"]
+        },
+        {
+            "title": "Digital Safety Tips",
+            "steps": ["Enable 2FA on all social media", "Use a VPN on public Wi-Fi", "Screenshot and report online threats"]
+        }
+    ],
+    "events": [
+        {
+            "date": "May 15, 2026",
+            "title": "Self-Defense Workshop",
+            "location": "Quezon City Hall",
+            "type": "In-Person"
+        },
+        {
+            "date": "June 02, 2026",
+            "title": "Webinar: Digital Safety",
+            "location": "Zoom Meeting",
+            "type": "Online"
+        },
+        {
+            "date": "June 10, 2026",
+            "title": "Women in Tech Meetup",
+            "location": "Makati CBD",
+            "type": "In-Person"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+:root {
+    --primary: #0d9488;
+    --primary-dark: #0f766e;
+    --accent: #ea580c;
+    --bg-light: #fafaf9;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-link {
+    @apply text-teal-900 font-medium hover:text-orange-600 transition-colors relative text-sm tracking-wide;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ea580c;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.scrolled-nav {
+    @apply bg-white/95 backdrop-blur-md shadow-sm py-4;
+}
+
+.issue-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.issue-card:hover {
+    transform: translateY(-8px);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.mobile-nav-link {
+    @apply text-teal-900 hover:text-orange-600 transition-colors py-4 w-full text-center border-b border-stone-100;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d9488;
+    border-radius: 10px;
+}
+
+/* Glassmorphism utility */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Safety Focus */
+#quick-exit {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#quick-exit:active {
+    transform: scale(0.95);
+}
+
+/* Focus Rings */
+:focus-visible {
+    outline: 2px solid #ea580c;
+    outline-offset: 4px;
+}
+
+/* Responsive fixes */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

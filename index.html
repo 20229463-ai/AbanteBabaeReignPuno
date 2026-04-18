@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abante Babae | Women's Rights & Empowerment PH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased">
+
+    <!-- Quick Exit / Emergency Controls -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <button id="quick-exit" class="bg-red-600 text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-3 hover:bg-red-700 transition-all font-bold uppercase text-xs tracking-widest border-2 border-white">
+            <i data-lucide="log-out" class="w-5 h-5"></i>
+            <span>Quick Exit (Esc)</span>
+        </button>
+        <a href="#resources" class="bg-orange-600 text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-3 hover:bg-orange-700 transition-all font-bold uppercase text-xs tracking-widest">
+            <i data-lucide="phone-call" class="w-5 h-5 animate-pulse"></i>
+            <span>Emergency Tulong</span>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-40 transition-all duration-500 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter flex items-center gap-2">
+                <span class="bg-teal-600 text-white px-2 py-1 rounded">AB</span>
+                <span class="text-teal-900">Abante Babae</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#issues" class="nav-link">Issues</a>
+                <a href="#stories" class="nav-link">Stories</a>
+                <a href="#resources" class="nav-link">Tulong (Resources)</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#get-involved" class="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition-colors">Makisali</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="lg:hidden text-teal-900" id="menu-toggle">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-stone-50 hidden flex-col items-center justify-center space-y-8 text-2xl font-medium">
+        <button class="absolute top-8 right-8 text-teal-900" id="close-menu">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#issues" class="mobile-nav-link">Issues</a>
+        <a href="#stories" class="mobile-nav-link">Stories</a>
+        <a href="#resources" class="mobile-nav-link">Tulong (Help)</a>
+        <a href="#events" class="mobile-nav-link">Events</a>
+        <a href="#get-involved" class="mobile-nav-link text-teal-700 font-bold">Makisali (Join)</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="relative h-[90vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/0efee850db9cb91c_womens_empowerment_hero_banner_index_0.jpeg" alt="Hero" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-teal-900/80 via-teal-900/40 to-transparent"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-2xl text-white">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight fade-in">
+                    Every Filipina <br><span class="italic font-serif text-orange-200">empowered.</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-teal-50/90 leading-relaxed fade-in">
+                    Fighting for gender equality, safety, and rights across the Philippines. 
+                    <span class="font-semibold text-orange-200 underline underline-offset-8">Magkasama tayo</span>—we are together in this.\
+                </p>
+                <div class="flex flex-wrap gap-4 fade-in">
+                    <a href="#issues" class="px-8 py-4 bg-teal-600 hover:bg-teal-500 rounded-full font-semibold transition-all shadow-lg">Learn More</a>
+                    <a href="#get-involved" class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full font-semibold border border-white/30 transition-all">Get Involved</a>
+                    <a href="#contact" class="px-8 py-4 bg-orange-600 hover:bg-orange-500 rounded-full font-semibold transition-all">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-teal-900 text-sm font-bold tracking-widest uppercase mb-4">Advocacy Mission</h2>
+                    <h3 class="text-4xl font-bold mb-8 text-slate-900">Why This Matters</h3>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        The Philippines has strong laws, but awareness and economic barriers often prevent women from claiming their rights. We bridge that gap for students and community members.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="text-orange-600 text-3xl font-bold">Impact</h4>
+                            <p class="text-slate-500 text-sm">Ensuring every woman knows her legal protections and potential.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-teal-600 text-3xl font-bold">Safety</h4>
+                            <p class="text-slate-500 text-sm">Creating digital and physical safe spaces for all.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal bg-stone-100 p-10 rounded-3xl border border-stone-200">
+                    <h4 class="text-xl font-bold mb-4 text-teal-800 font-serif">Our Founder's Vision</h4>
+                    <p class="text-slate-700 italic mb-6">"A future where every Filipina lives free from violence, finishes her education, and leads in her chosen field."</p>
+                    <div class="flex items-center gap-5 pt-6 border-t border-stone-200">
+                        <div class="w-20 h-20 bg-stone-200 rounded-full overflow-hidden border-2 border-teal-100 shadow-sm shrink-0 flex items-center justify-center">
+                            <img src="https://ui-avatars.com/api/?name=Reign+Eizenbert+B+Puno&background=0d9488&color=fff&size=200" alt="Founder Portrait" class="object-cover w-full h-full">
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-lg leading-tight">Reign Eizenbert B. Puno</p>
+                            <p class="text-xs text-teal-700 font-bold uppercase tracking-widest mb-1">Founder & Lead Advocate</p>
+                            <p class="text-sm text-slate-500 flex items-center gap-1">
+                                <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                                +63 976 156 6964
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Issues -->
+    <section id="issues" class="py-24 bg-stone-50">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl font-bold text-teal-900 mb-4">Key Issues & Rights</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">Understanding these fundamental areas helps us build a stronger, more equal society.</p>
+        </div>
+        <div class="container mx-auto px-6">
+            <div id="issues-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories -->
+    <section id="stories" class="py-24 bg-teal-900 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">Stories of Strength</h2>
+                    <p class="text-teal-200 max-w-md">Victories and challenges shared with utmost respect for privacy. Names may be changed for safety.</p>
+                </div>
+                <a href="#contact" class="hidden md:block px-6 py-3 border border-white/30 rounded-full hover:bg-white/10 transition-all text-sm">Share Your Story</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8" id="stories-container">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources / Toolkit -->
+    <section id="resources" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900">Safety & Resources Toolkit</h2>
+                <p class="text-slate-600 mt-4">Practical help when you need it most.</p>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-100 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3 text-orange-700">
+                        <i data-lucide="phone"></i> Philippine Hotlines
+                    </h3>
+                    <div id="hotlines-list" class="space-y-4"></div>
+                </div>
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-6" id="guides-list">
+                    <!-- Guides Injected -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="py-24 bg-stone-50 border-y border-stone-200">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-3xl font-bold text-teal-900">Events Calendar</h2>
+                <div class="flex gap-2">
+                    <span class="w-3 h-3 bg-teal-600 rounded-full"></span>
+                    <span class="w-3 h-3 bg-orange-500 rounded-full opacity-30"></span>
+                </div>
+            </div>
+            <div id="events-container" class="grid gap-6">
+                <!-- Events Injected -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved -->
+    <section id="get-involved" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl">
+                <div class="bg-teal-800 p-12 text-white">
+                    <h2 class="text-3xl font-bold mb-6">Makisali: How You Can Help</h2>
+                    <p class="mb-8 text-teal-100 leading-relaxed">Your voice adds power to our collective message. Sign up to volunteer or stay updated.</p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="share-2" class="text-orange-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold">Social Actions</p>
+                                <p class="text-sm text-teal-200">Share our posts using #AbanteBabaePH</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="heart" class="text-orange-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold">Volunteer</p>
+                                <p class="text-sm text-teal-200">Join our local community workshops</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-12 bg-white">
+                    <form id="volunteer-form" class="space-y-4">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Volunteer Application</h3>
+                        <input type="text" placeholder="Full Name" required class="w-full px-4 py-3 border border-stone-200 rounded-xl outline-none focus:ring-2 focus:ring-teal-600 transition-all">
+                        <input type="email" placeholder="Email Address" required class="w-full px-4 py-3 border border-stone-200 rounded-xl outline-none focus:ring-2 focus:ring-teal-600 transition-all">
+                        <select class="w-full px-4 py-3 border border-stone-200 rounded-xl outline-none focus:ring-2 focus:ring-teal-600 transition-all bg-white">
+                            <option>Advocacy Partner</option>
+                            <option>Student Volunteer</option>
+                            <option>Legal/Health Support</option>
+                        </select>
+                        <button type="submit" class="w-full bg-teal-700 text-white font-bold py-4 rounded-xl hover:bg-teal-800 transition-all shadow-lg">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-teal-950 text-teal-100 py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="col-span-2">
+                    <h2 class="text-2xl font-bold text-white mb-6">Abante Babae</h2>
+                    <p class="mb-8 max-w-md text-teal-200/70">A safe space for every Filipina. Tandaan: Karapatan mong maging ligtas at malaya. (Remember: It is your right to be safe and free.)</p>
+                    <form id="newsletter-form" class="flex max-w-sm gap-2">
+                        <input type="email" placeholder="Newsletter email" required class="flex-grow bg-white/10 border border-white/20 px-4 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        <button class="bg-orange-600 px-4 py-2 rounded-lg font-bold hover:bg-orange-700 transition-colors">Join</button>
+                    </form>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">Partner NGOs</h4>
+                    <ul class="space-y-3 text-sm opacity-70">
+                        <li>Women's Crisis Center</li>
+                        <li>Gabriela</li>
+                        <li>PCW Philippines</li>
+                        <li>UP Center for Women's Studies</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-6">Connect</h4>
+                    <div class="space-y-3 text-sm">
+                        <p class="flex items-center gap-2 font-semibold text-white"><i data-lucide="globe" class="w-4 h-4 opacity-70"></i> ReignPuno.com</p>
+                        <p class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4 opacity-70"></i> Reign Eizenbert B. Puno</p>
+                        <p class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 opacity-70"></i> 20229463@s.ubaguio.edu</p>
+                        <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 opacity-70"></i> +63 976 156 6964</p>
+                    </div>
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-orange-600 hover:border-orange-600 transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-orange-600 hover:border-orange-600 transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 mt-12 border-t border-white/10 text-center text-xs opacity-40">
+                <p>&copy; 2026 Abante Babae Advocacy Philippines | ReignPuno.com</p>
+                <p class="mt-2 italic">Created with passion by Reign Eizenbert B. Puno</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
